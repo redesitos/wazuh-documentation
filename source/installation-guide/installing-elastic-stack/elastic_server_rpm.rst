@@ -152,7 +152,8 @@ Logstash is the tool that will collect, parse, and forward to Elasticsearch for 
   .. code-block:: bash
 
   	$ chkconfig --add logstash
-  	$ service logstash start
+        $ initctl start logstash
+
 
 .. note::
 
