@@ -77,6 +77,14 @@ Elasticsearch is a highly scalable full-text search and analytics engine. For mo
 
   	$ chkconfig --add elasticsearch
   	$ service elasticsearch start
+	
+If you start elasticsearch, a memory error occurs, this is because the environment where you are performing the installation is low memory, you can adjust the java variable to allow the operation to adjust the next variable. 
+
+in the /etc/init.d/elasticsearch file
+
+ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+$ service elasticsearch start
 
 3. Load Wazuh Elasticsearch template:
 
